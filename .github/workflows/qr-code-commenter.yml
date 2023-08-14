@@ -1,0 +1,11 @@
+name: 'QR Code Generator'
+on: [push]
+jobs:
+  action-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: darioghilardi/qr-code-generator@master
+        id: qrcode
+        with:
+          content: https://github.com/darioghilardi
+      - run: echo ${{ steps.qrcode.outputs.base64 }}

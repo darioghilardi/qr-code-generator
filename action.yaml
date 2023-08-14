@@ -1,0 +1,18 @@
+name: 'QR Code Generator'
+description: 'A GitHub Action that generates a QR code'
+author: 'darioghilardi'
+inputs: 
+  content: 
+    description: 'The content to encode to QR code. Must be string.'
+    required: true
+outputs: 
+  data:
+    description: 'Base64 Data For the Generated QR Code'
+  text: 
+    description: 'ASCII Text Representation of the Generated QR COde'
+runs: 
+  using: 'node16'
+  main: 'dist/index.js'
+branding: 
+  icon: 'image'
+  color: 'gray-dark'
